@@ -14,7 +14,6 @@ namespace Group_Project
             Console.WriteLine("Welcome to your Water Bill Calculator App");
 
 
-
             Console.WriteLine("Enter your customer ID");
             string CustomerId = Console.ReadLine();
 
@@ -50,14 +49,14 @@ namespace Group_Project
                 NetAmount = SurchargeAmount + AmountCharged;
 
             }
-            if (AmountCharged <= 100)
+            if (AmountCharged <= 100 || AmountCharged < 300)
             {
-                NetAmount = SurchargeAmount + AmountCharged;
+                NetAmount = AmountCharged;
 
             }
 
 
-            Console.WriteLine($" Customer IDNO: {CustomerId}\n Customer Name: {CustomerName}\n Unit Consumed: {UnitConsumed}\n Amount Charges @ N2.00 per unit: {AmountCharged}\n Surchage Amount: {SurchargeAmount}\n Net Amount paid by the Customer: {NetAmount}");
+            Console.WriteLine($" Customer IDNO: {CustomerId}\n Customer Name: {CustomerName}\n Unit Consumed: {UnitConsumed}\n Amount Charges @ N2.00 per unit: N {AmountCharged}\n Surchage Amount: N {SurchargeAmount}\n Net Amount paid by the Customer: N {NetAmount}");
 
         }
     }
